@@ -1,0 +1,30 @@
+from exceptions import *
+
+CATEGORIES = [
+    "Food",
+    "Shopping",
+    "Education",
+    "Health",
+    "Entertainment",
+    "Other"
+]
+
+def validateTitle(title):
+    title = title.strip()
+
+    if not title:
+        invalidExpense("Title cannot be empty!")
+
+    return title
+
+def validateAmount(amount):
+    try:
+        amount = float(amount)
+
+    except ValueError:
+        invalidExpenses("Amount must be a number!")
+
+    if amount <= 0:
+        invalidExpense("Amount must be greater than 0!")
+
+    return amount
