@@ -22,3 +22,5 @@ def exportToCSV():
         writer = csv.DictWriter(file, fieldnames= fieldNames)
         writer.writeheader()
         writer.writerows(expenses)
+
+    return filePath
