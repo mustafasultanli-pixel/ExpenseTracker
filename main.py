@@ -104,7 +104,3 @@ def startApp():
 
         except LookupError as e:
             print("Error:", e)
-
-
-if __name__ == "__main__":
-    startApp()
